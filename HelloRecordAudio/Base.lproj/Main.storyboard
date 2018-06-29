@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HelloRecordAudio" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atW-ik-88I">
+                                <rect key="frame" x="138" y="115" width="99" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="99" id="DYB-OL-RxQ"/>
+                                    <constraint firstAttribute="height" constant="30" id="sN3-dQ-ONs"/>
+                                </constraints>
+                                <state key="normal" title="Record"/>
+                                <connections>
+                                    <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uhc-px-BwW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wcp-DY-Fho">
+                                <rect key="frame" x="125" y="212" width="125" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="6TK-q5-Hie"/>
+                                    <constraint firstAttribute="width" constant="125" id="gU6-rE-uQu"/>
+                                </constraints>
+                                <state key="normal" title="Stop Recording"/>
+                                <connections>
+                                    <action selector="stopRecordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Um-oF-z2t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ag-S0-q9H">
+                                <rect key="frame" x="145" y="337" width="85" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="LHQ-rD-FQH"/>
+                                    <constraint firstAttribute="height" constant="30" id="bsv-ct-rpd"/>
+                                </constraints>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playRecordSound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YZw-aa-Tsp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HaK-6D-KXx">
+                                <rect key="frame" x="122" y="437" width="130" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="1MD-I4-DnC"/>
+                                    <constraint firstAttribute="height" constant="51" id="KTY-VS-yJK"/>
+                                </constraints>
+                                <state key="normal" title="Stop Playing"/>
+                                <connections>
+                                    <action selector="stopPlaying:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OCB-Xd-plc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0Ag-S0-q9H" firstAttribute="top" secondItem="Wcp-DY-Fho" secondAttribute="bottom" constant="99" id="0GD-cb-087"/>
+                            <constraint firstItem="atW-ik-88I" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="95" id="3CU-L4-AD4"/>
+                            <constraint firstItem="0Ag-S0-q9H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6wA-pY-PoB"/>
+                            <constraint firstItem="Wcp-DY-Fho" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fve-xU-cvD"/>
+                            <constraint firstItem="Wcp-DY-Fho" firstAttribute="top" secondItem="atW-ik-88I" secondAttribute="bottom" constant="67" id="GEd-hV-rsN"/>
+                            <constraint firstItem="HaK-6D-KXx" firstAttribute="top" secondItem="0Ag-S0-q9H" secondAttribute="bottom" constant="70" id="IgX-ya-ByG"/>
+                            <constraint firstItem="atW-ik-88I" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JaK-KM-foN"/>
+                            <constraint firstItem="HaK-6D-KXx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xqb-i6-KZg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+</document>
